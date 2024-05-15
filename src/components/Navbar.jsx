@@ -20,10 +20,12 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img alt="logo" src={logo} className="w-9 h-9 object-contain"></img>
-          <p className="text-white text-lg font-bold cursor-pointer">
-            Avelin Ann
-          </p>
+          <img
+            alt="logo"
+            src={logo}
+            className="w-15
+           h-9 object-contain"
+          ></img>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10 px-10">
           {navLinks.map((link) => (
