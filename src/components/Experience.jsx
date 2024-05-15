@@ -16,7 +16,7 @@ const ExperienceCard = (exp) => {
       contentArrowStyle={{ borderRight: "7px solid #232631" }}
       iconStyle={{ background: exp.iconBg }}
       iconOnClick={
-        <div className="flex justify-center items-center w-full h-full">
+        <div className="flex justify-center items-center w-full h-full ">
           <img
             src={exp.icon}
             alt={exp.company_name}
