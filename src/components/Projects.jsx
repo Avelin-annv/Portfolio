@@ -9,13 +9,16 @@ import { github, demo } from "../assets";
 import { projects } from "../constants";
 const ProjectCard = ({ index, description, name, image, source_code_link }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      className="mx-auto lg:mx-1 my-2"
+    >
       <Tilt
         options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-tertiary p-5 rounded-3xl sm:w-[350px] w-full m-6"
+        className="bg-tertiary p-5 rounded-3xl md:w-[350px] w-full lg:m-6 "
       >
         <div className="relative w-full h-[250px] ">
-          <img src={image} alt={name} className="rounded-2xl w-full h-full" />
+          <img src={image} alt={name} className="rounded-2xl w-full h-full " />
         </div>
 
         <div className="mt-3">
@@ -41,7 +44,7 @@ const Projects = () => {
       <motion.div variants={textVariant()} className="mt-4 mb-6">
         <h2 className={styles.sectionHeadText}>Projects</h2>
       </motion.div>
-      <div className="flex flex-wrap mt-8">
+      <div className="flex flex-wrap mt-8 ">
         {projects.map((project, idx) => (
           <ProjectCard key={`proj-${idx}`} {...project} index={idx} />
         ))}

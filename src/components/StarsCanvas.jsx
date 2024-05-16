@@ -4,7 +4,7 @@ import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
 const Stars = (props) => {
   const starRef = useRef();
-  const sphere = random.inSphere(new Float32Array(50000), { radius: 15 });
+  const sphere = random.inSphere(new Float32Array(60000), { radius: 15 });
   useFrame((state, delta) => {
     starRef.current.rotation.x -= delta / 10;
     starRef.current.rotation.y -= delta / 15;
