@@ -5,11 +5,7 @@ import { styles } from "../style";
 import SectionContainer from "./SectionContainer";
 import { slideIn, textVariant } from "../utils/motion";
 import { github, linkedIn, gmail } from "../assets";
-import {
-  EMAIL_PUBLIC_KEY,
-  EMAIL_SERVICE_ID,
-  EMAIL_TEMPLATE_KEY,
-} from "../constants/email";
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -23,15 +19,15 @@ const Contact = () => {
     setLoading(true);
     emailjs
       .send(
-        EMAIL_SERVICE_ID,
-        EMAIL_TEMPLATE_KEY,
+        import.meta.env.VITE_EMAIL_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_TEMPLATE_KEY,
         {
           from_name: form.name,
           from_email: form.email,
           to_email: process.env.REACT_APP_TO_EMAIL,
           message: form.message,
         },
-        EMAIL_PUBLIC_KEY
+        import.meta.env.VITE_EMAIL_PUBLIC_KEY
       )
       .then(
         () => {
