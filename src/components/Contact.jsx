@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import { styles } from "../style";
 import SectionContainer from "./SectionContainer";
 import { slideIn, textVariant } from "../utils/motion";
-import { github, linkedIn, gmail } from "../assets";
+import { github, linkedIn, gmail, rocket } from "../assets";
 
 const Contact = () => {
   const formRef = useRef();
@@ -46,43 +46,43 @@ const Contact = () => {
   };
   return (
     <SectionContainer id="contact">
-      <div className="xl:mt-12 md:w-[50%] mx-auto">
+      <div className="xl:mt-12 md:w-[70%] mx-auto ">
         <motion.div variants={textVariant()} className="mb-4">
           <h3 className={styles.sectionHeadText}>Get in touch</h3>
         </motion.div>
         <motion.div
           variants={slideIn("right", "tween", 0.2, 1)}
-          className="flex-[0.5] bg-black-100 p-8 rounded-3xl"
+          className="flex-[0.5] bg-black-100 p-8 moon-bg rounded-full"
         >
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="gap-8 mt-10 flex-col"
+            className="gap-8 mt-10 flex-col w-[90%] mx-auto text-white"
           >
-            <label className="flex flex-col text-xl">
-              <span className="my-6">Your name</span>
+            <label className="flex flex-col text-xl lg:mx-8">
+              <span className="my-6 sm:text-xl font-semibold">Name</span>
               <input
                 type="text"
                 name="name"
                 placeholder="What's your name"
                 value={form.name}
                 onChange={(e) => handleChange(e.target)}
-                className="bg-tertiary rounded-xl text-secondary outlined-none py-4 border-none shadow-md shadow-primary"
+                className="bg-transparent rounded-xl text-white outlined-none py-4 border-none shadow-md shadow-primary"
               />
             </label>
             <label className="flex flex-col text-xl">
-              <span className="my-6">Your email</span>
+              <span className="my-6 sm:text-xl font-semibold">Email</span>
               <input
                 type="email"
                 name="email"
                 placeholder="What's your email"
                 value={form.email}
                 onChange={(e) => handleChange(e.target)}
-                className="bg-tertiary rounded-xl text-secondary outlined-none py-4 border-none shadow-md shadow-primary"
+                className="bg-transparent rounded-xl text-white outlined-none py-4 border-none shadow-md shadow-primary"
               />
             </label>
-            <label className="flex flex-col text-xl">
-              <span className="my-6">Your message</span>
+            <label className="flex flex-col sm:text-xl font-semibold">
+              <span className="my-6 sm:text-xl">Drop in a message</span>
               <textarea
                 type="text"
                 rows={7}
@@ -90,14 +90,16 @@ const Contact = () => {
                 placeholder="Drop in a message"
                 value={form.message}
                 onChange={(e) => handleChange(e.target)}
-                className="bg-tertiary rounded-xl text-secondary outlined-none py-4 border-none shadow-md shadow-primary"
+                className="bg-transparent rounded-xl text-white outlined-none py-4 border-none shadow-md shadow-primary "
               />
             </label>
             <button
               type="submit"
-              className="px-8 py-4 text-xl bg-tertiary m-4 rounded-xl outline-none font-bold shadow-md shadow-primary"
+              className="px-2 py-1 text-xl bg-tertiary m-4 rounded-xl outline-none font-bold shadow-md shadow-primary mx-auto flex flex-col"
               onClick={(e) => handleSubmit(e)}
+              style={{ backgroundImage: rocket }}
             >
+              <img src={rocket} className="w-10 h-10 mx-auto" />
               {loading ? "Sending..." : "Send"}
             </button>
           </form>

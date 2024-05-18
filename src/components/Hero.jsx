@@ -18,7 +18,7 @@ const Hero = () => {
               <span className="text-[#972c5a]"> Avelin</span>
             </h1>
             <h2 className={styles.mainSubText}>
-              I'm a <span className="text-[#972c5a]"> frontend</span> developer.
+              A <span className="text-[#972c5a]"> frontend</span> developer.
             </h2>
             <h3 className={styles.mainSubText}>
               I love building purposeful & engaging digital experiences.
@@ -27,7 +27,6 @@ const Hero = () => {
         </motion.div>
         {/* <motion.div
           className="h-[100vw]"
-          
         >
           <ComputerModel />
         </motion.div> */}

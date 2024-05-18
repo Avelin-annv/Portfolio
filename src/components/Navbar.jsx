@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { styles } from "../style";
 import { Link } from "react-router-dom";
 import { logo, menu, close } from "../assets";
@@ -9,7 +9,7 @@ const Navbar = () => {
   const [expandMenu, setExpandMenu] = useState(false);
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-transparent`}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-transparent bg-blur`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
