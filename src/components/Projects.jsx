@@ -46,7 +46,7 @@ const Projects = () => {
       </motion.div>
       <div className="flex flex-wrap mt-8 ">
         {projects.map((project, idx) => (
-          <ProjectCard key={`proj-${idx}`} {...project} index={idx} />
+          <ProjectCard key={`proj-${project.id}`} {...project} index={idx} />
         ))}
       </div>
     </SectionContainer>
