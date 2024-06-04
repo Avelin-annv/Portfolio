@@ -1,12 +1,15 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { styles } from "../style";
 import SectionContainer from "./SectionContainer";
 import { slideIn, textVariant } from "../utils/motion";
-import { github, linkedIn, gmail, rocket } from "../assets";
+import { github, linkedIn, rocket } from "../assets";
+import { Link, useNavigate } from "react-router-dom";
+import { SOCIAL_LINKS } from "../constants";
 
 const Contact = () => {
+  const navigate = useNavigate();
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -106,12 +109,16 @@ const Contact = () => {
           <div>
             <p>Feel free to connect</p>
             <div>
-              <button className="rounded-full w-9 mx-1 hover:shadow-2xl hover:shadow-white shadow-inner">
-                <img src={github} />
-              </button>
-              <button className="rounded-full w-9 mx-1 hover:shadow-2xl hover:shadow-white">
-                <img src={linkedIn} className="rounded-3xl" />
-              </button>
+              <Link to={SOCIAL_LINKS.github}>
+                <button className="rounded-full w-9 mx-1 hover:shadow-2xl hover:shadow-white shadow-inner">
+                  <img src={github} />
+                </button>
+              </Link>
+              <Link to={SOCIAL_LINKS.linkedIn}>
+                <button className="rounded-full w-9 mx-1 hover:shadow-2xl hover:shadow-white">
+                  <img src={linkedIn} className="rounded-full " />
+                </button>
+              </Link>
             </div>
           </div>
         </motion.div>

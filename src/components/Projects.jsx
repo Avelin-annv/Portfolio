@@ -44,6 +44,9 @@ const Projects = () => {
       <motion.div variants={textVariant()} className="mt-4 mb-6">
         <h2 className={styles.sectionHeadText}>Projects</h2>
       </motion.div>
+      <p className="my-2 text-xl text-secondary">
+        Some of the personal projects that I've worked on{" "}
+      </p>
       <div className="flex flex-wrap mt-8 ">
         {projects.map((project, idx) => (
           <ProjectCard key={`proj-${project.id}`} {...project} index={idx} />
