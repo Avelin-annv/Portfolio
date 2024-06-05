@@ -5,11 +5,10 @@ import { styles } from "../style";
 import SectionContainer from "./SectionContainer";
 import { slideIn, textVariant } from "../utils/motion";
 import { github, linkedIn, rocket } from "../assets";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { SOCIAL_LINKS } from "../constants";
 
 const Contact = () => {
-  const navigate = useNavigate();
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -116,7 +115,11 @@ const Contact = () => {
               </Link>
               <Link to={SOCIAL_LINKS.linkedIn}>
                 <button className="rounded-full w-9 mx-1 hover:shadow-2xl hover:shadow-white">
-                  <img src={linkedIn} className="rounded-full " />
+                  <img
+                    src={linkedIn}
+                    className="rounded-full  "
+                    loading="lazy"
+                  />
                 </button>
               </Link>
             </div>
