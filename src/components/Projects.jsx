@@ -18,19 +18,28 @@ const ProjectCard = ({ index, description, name, image, source_code_link }) => {
         className="bg-tertiary p-5 rounded-3xl md:w-[350px] w-full lg:m-6 "
       >
         <div className="relative w-full h-[250px] ">
-          <img src={image} alt={name} className="rounded-2xl w-full h-full " />
+          <img
+            src={image}
+            alt={name}
+            loading="lazy"
+            className="rounded-2xl w-full h-full "
+          />
         </div>
 
         <div className="mt-3">
           <h3 className="font-bold text-lg">{name}</h3>
-          <h3 className="text-secondary mt-2">{description}</h3>
+          <h3 className="text-secondary mt-2 min-h-[85px]">{description}</h3>
         </div>
-        <div className="flex flex-row">
+        <div className="flex flex-row mt-2">
           <Link to="https://github.com/Avelin-annv" className="mx-2">
-            <img src={github} className="w-6 h-6"></img>
+            <img src={github} loading="lazy" className="w-6 h-6"></img>
           </Link>
           <Link>
-            <img src={demo} className="w-6 h-6 rounded-full"></img>
+            <img
+              src={demo}
+              loading="lazy"
+              className="w-6 h-6 rounded-full"
+            ></img>
           </Link>
         </div>
       </Tilt>
