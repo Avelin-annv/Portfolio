@@ -68,7 +68,7 @@ const Navbar = () => {
                   <hr />
                 </li>
               ))}
-              <li
+              {/* <li
                 key={"resume"}
                 className={
                   "text-secondary hover:text-white hover:text-lg font-medium font-poppins cursor-pointer p-2"
@@ -76,7 +76,7 @@ const Navbar = () => {
                 onClick={() => {}}
               >
                 Resume
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
