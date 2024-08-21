@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../style";
-import ComputerModel from "./ComputerCanvas";
 import { slideIn } from "../utils/motion";
 
 const Hero = () => {
@@ -25,11 +24,6 @@ const Hero = () => {
             </h3>
           </div>
         </motion.div>
-        {/* <motion.div
-          className="h-[100vw]"
-        >
-          <ComputerModel />
-        </motion.div> */}
       </div>
     </section>
   );

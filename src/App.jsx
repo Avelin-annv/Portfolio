@@ -5,6 +5,7 @@ import Experience from "./components/Experience";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
+import Resume from "./components/Resume";
 import StarsCanvas from "./components/StarsCanvas";
 import Tech from "./components/Tech";
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Experience />
       <div className="relative z-0">
         <Contact />
+        <Resume />
       </div>
     </div>
   );
