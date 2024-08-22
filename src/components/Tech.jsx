@@ -3,7 +3,6 @@ import { textVariant } from "../utils/motion";
 import { motion } from "framer-motion";
 import SectionContainer from "./SectionContainer";
 import { technologies } from "../constants";
-import BallCanvas from "./BallCanvas";
 import { styles } from "../style";
 
 const Tech = () => {
